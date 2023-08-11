@@ -1,7 +1,8 @@
 /*
 Foi o que eu consegui fazer até o momento
-   
-Porém as saidas esperadas , consegui realizar , Obrigado pelo desafio dependendo ,o que acontecerá, foi muito enriquecedor para mim , me ajudou muito no meu desenvolvimento
+Sou iniciante ainda na linguagem JS.
+Porém as saidas esperadas , consegui realizar , 
+Obrigado pelo desafio dependendo ,o que acontecerá, foi muito enriquecedor para mim , me ajudou muito no meu desenvolvimento
  :) */
 
 class CaixaDaLanchonete {
