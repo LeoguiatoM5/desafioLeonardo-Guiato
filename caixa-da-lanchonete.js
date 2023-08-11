@@ -5,7 +5,7 @@ Porém as saidas esperadas , consegui realizar ,
 Obrigado pelo desafio dependendo ,o que acontecerá, foi muito enriquecedor para mim , me ajudou muito no meu desenvolvimento
  :) */
 
-class CaixaDaLanchonete {
+ class CaixaDaLanchonete {
     cardapio = [
         { codigo: 'cafe', descricao: 'Café', valor: 3.00 },
         { codigo: 'chantily', descricao: 'Chantily (extra do Café)', valor: 1.50 },
@@ -29,6 +29,11 @@ class CaixaDaLanchonete {
         let total = 0;
         let mainItems = new Set();
         let extraItems = new Set();
+        const extraToMainMap = {
+            'chantily': 'cafe',
+            'queijo': 'sanduiche',
+                
+        };
 
         for (const itemInfo of itens) {
             const [codigo, quantidade] = itemInfo.split(',');
@@ -53,8 +58,8 @@ class CaixaDaLanchonete {
         }
 
         for (const extraItem of extraItems) {
-            const mainItemCode = extraItem.split(' ')[0]; 
-            if (!mainItems.has(mainItemCode)) {
+            const mainItemCode = extraToMainMap[extraItem];
+            if (!mainItemCode || !mainItems.has(mainItemCode)) {
                 return 'Item extra não pode ser pedido sem o principal';
             }
         }
@@ -70,8 +75,7 @@ class CaixaDaLanchonete {
 }
 
 console.log(new CaixaDaLanchonete().calcularValorDaCompra('debito', ['chantily,1']));
-console.log(new CaixaDaLanchonete().calcularValorDaCompra('debito', ['cafe,1', 'chantily,1']));
+console.log(new CaixaDaLanchonete().calcularValorDaCompra('debito', ['cafe,1','chantily,1']));
 console.log(new CaixaDaLanchonete().calcularValorDaCompra('credito', ['combo1,1', 'cafe,2']));
-
 
 export { CaixaDaLanchonete };
