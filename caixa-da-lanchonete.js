@@ -1,9 +1,19 @@
 /*
 Foi o que eu consegui fazer até o momento
+
 Sou iniciante ainda na linguagem JS.
 Porém as saidas esperadas , consegui realizar , 
 Obrigado pelo desafio dependendo ,o que acontecerá, foi muito enriquecedor para mim , me ajudou muito no meu desenvolvimento
- :) */
+
+ :)
+ 
+ Eu não consegui compreender, o erro especifícado  para fazer a correção lógica "× compra "com um valor" em "credito" deve resultar em "Item inválido!" foi o único teste
+ que não passou
+ Se puderem dar um FeedBack em relação a ele como resolver...
+ 
+ 
+ 
+ */
 
  class CaixaDaLanchonete {
     cardapio = [
